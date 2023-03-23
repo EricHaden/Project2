@@ -1,0 +1,33 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fffefe;
+  }
+  
+  .Header-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .Header-buttons {
+    display: flex;
+  }
+  
+  .Header-button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .Header-button:hover {
+    background-color: #696969;
+  }
+  
