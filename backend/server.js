@@ -18,42 +18,50 @@ const storage = multer.diskStorage({
       cb(null, "./Images/")
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now()+".jpg")
+    cb(null, 'image' + "-" + Date.now()+".jpg")
   }
 })
 
 var upload = multer({storage:storage});
-console.log(upload.destination);
 
 app.post('/upload', upload.single('image'), uploadImage);
 
 function uploadImage(req,res){
-  // console.log('post stuff');
-  // console.log(req.body.image);
 
-  // if (!req.file) {
-  //   console.log('No file received');
-  //   return res.status(400).send('No file received');
-  // }
-
-  // res.send('Image uploaded successfully');
-  ////////////////////////////////////////////////////////
   console.log('post stuff');
   console.log(req.body.image);
 
   // decode the base64 string to a Buffer
-  const imageBuffer = Buffer.from(req.body.image, 'base64');
+ const imageBuffer = Buffer.from(req.body.image, 'base64');
+
+//  function base64_to_jpeg($base64_string, $output_file) {
+//   // open the output file for writing
+//   $ifp = fopen( $output_file, 'wb' ); 
+
+//   // split the string on commas
+//   // $data[ 0 ] == "data:image/png;base64"
+//   // $data[ 1 ] == <actual base64 string>
+//   $data = explode( ',', $base64_string );
+
+//   // we could add validation here with ensuring count( $data ) > 1
+//   fwrite( $ifp, base64_decode( $data[ 1 ] ) );
+
+//   // clean up the file resource
+//   fclose( $ifp ); 
+
+//   return $output_file; 
+// }
 
   // generate a unique filename for the image
   const filename = `image-${Date.now()}.jpg`;
 
   // save the image file to disk
-  fs.writeFile(`./Images/${filename}`, imageBuffer, (err) => {
+  fs.writeFile(`./Images/${filename}`, req.body.image, (err) => {
     if (err) {
       console.error(err);
       return res.status(500).send('Error saving image');
     }
-
+    console.log(typeof(req.body.image))
     console.log('Image saved successfully');
     res.send('Image uploaded successfully');
   });
