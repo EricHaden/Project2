@@ -16,7 +16,7 @@ const WebcamCapture = () => {
     // Send a POST request to the server to upload the image
     fetch('http://localhost:8000/upload', {
       method: 'POST',
-      body: formData
+      body: formData,
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
