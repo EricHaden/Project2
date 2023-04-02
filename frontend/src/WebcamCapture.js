@@ -12,9 +12,11 @@ const WebcamCapture = () => {
     // Create a FormData object and append the captured image to it
     const formData = new FormData();
     formData.append('image', imageSrc);
+    const mode = "god";
+    formData.append('mode', mode);
     
     // Send a POST request to the server to upload the image
-    fetch('http://localhost:8000/upload', {
+    fetch('http://172.28.90.45:8080/upload', {
       method: 'POST',
       body: formData,
     })
