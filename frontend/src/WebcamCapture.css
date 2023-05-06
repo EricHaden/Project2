@@ -1,17 +1,26 @@
+/* css class for the camera block */
 .Camera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fffefe;
-  }
-  .Button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fffefe;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fffefe;
+}
 
+/* css class for a button object */
+.Button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fffefe;
+}
+
+/* css class for an image */
+.image {
+  justify-content: right;
+  align-items: center;
+  padding: 1rem;
+}

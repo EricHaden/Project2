@@ -1,33 +1,30 @@
-.Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fffefe;
-  }
+@font-face {
+  font-family: 'pixelFont';
+  src: url('./Images/ARCADECLASSIC.TTF') format('truetype');
+}
+
+/* css class of container */
+.title-container {
+  position: relative;
+}
+
+/* css class of centered block */
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+/* css class of background image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./Images/background.webp');
+  background-size: cover;
   
-  .Header-title {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .Header-buttons {
-    display: flex;
-  }
-  
-  .Header-button {
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    background-color: #fff;
-    color: #333;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .Header-button:hover {
-    background-color: #696969;
-  }
-  
+  z-index: -1;
+}

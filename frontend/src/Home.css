@@ -1,0 +1,92 @@
+/* Define a custom font called 'pixelFont' and set its source file */
+@font-face {
+  font-family: 'pixelFont';
+  src: url('./Images/ARCADECLASSIC.TTF') format('truetype');
+}
+
+/* Style for the container of the mode selection */
+.mode_selection {
+  /* Center its contents horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set a background image and adjust its size and position */
+  background-image: url('./Images/sunset.png');
+  background-size: cover;
+  background-position: center;
+  /* Set the height of the container to be 100% of the viewport */
+  height: 100vh;
+  /* Set the initial opacity to 0 and apply a fade-in animation */
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Define a keyframe animation called 'fadeIn' */
+@keyframes fadeIn {
+  /* At the beginning of the animation, set the opacity to 0 */
+  0% {
+    opacity: 0;
+  }
+  /* At the end of the animation, set the opacity to 1 */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Styling for the 'Title' and 'WebcamCapture' elements */
+.Title, .WebcamCapture {
+  /* Set the background color to green and the text color to white */
+  background-color: #4CAF50;
+  color: white;
+  /* Set the font size to 20em, font weight to bold, and border radius to 50px */
+  font-size: 20em;
+  font-weight: bold;
+  border-radius: 50px;
+  /* Set the width and height of the element and add some margin */
+  width: 200px;
+  height: 200px;
+  margin: 0 25px;
+  /* Center the text within the element */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Apply a smooth transition when the element is hovered over */
+  transition: all 0.3s ease-in-out;
+}
+
+/* When the 'Title' or 'WebcamCapture' element is hovered over, enlarge it and add a box shadow */
+.Title:hover, .WebcamCapture:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove the underline from all hyperlinks */
+a {
+  text-decoration: none;
+}
+
+/* Set the height of all images to 300px */
+img {
+  height: 300px;
+}
+
+/* Center the container horizontally and set its width */
+.container {
+  margin: 50px;
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Style for the button container */
+.button-container {
+  /* Align the contents vertically and set the font family and size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "pixelFont";
+  font-size: 80px;
+}

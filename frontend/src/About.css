@@ -1,0 +1,213 @@
+/* Define custom font */
+@font-face {
+  font-family: 'pixelFont'; /* Font family name */
+  src: url('./Images/ARCADECLASSIC.TTF') format('truetype'); /* Font source URL */
+}
+
+/* Styling for the section with class "about" */
+.about {
+  background-image: url('./Images/greenBackground.webp'); /* Set background image */
+}
+
+/* Styling for the heading in the "about" section */
+.about-heading {
+  font-size: 40px; /* Set font size */
+  margin-bottom: 30px; /* Set bottom margin */
+  color: #d90368; /* Set font color */
+  font-family: "pixelFont"; /* Set custom font */
+}
+
+/* Styling for the text in the "about" section */
+.about-text {
+  font-size: 24px; /* Set font size */
+  margin-bottom: 20px; /* Set bottom margin */
+  color: #030303; /* Set font color */
+  font-family: 'pixelFont'; /* Set custom font */
+}
+
+/* Styling for the content container in the "about" section */
+.about-content {
+  animation: fade-in 1s ease-in-out; /* Set fade-in animation */
+  max-width: 1000px; /* Set maximum width */
+  margin: auto; /* Center align horizontally */
+  padding: 20px; /* Add padding */
+  font-family: 'pixelFont'; /* Set custom font */
+}
+
+/* Define keyframes for fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for the header section */
+.Header {
+  display: flex; /* Display as flex container */
+  justify-content: space-between; /* Align children to left and right */
+  align-items: center; /* Center align vertically */
+  padding: 1rem; /* Add padding */
+  background-color: #0c2b02; /* Set background color */
+  color: #fffefe; /* Set font color */
+}
+
+/* Styling for the header title */
+.Header-title {
+  font-size: 2rem; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  font-family: "pixelFont"; /* Set custom font */
+}
+
+/* Styling for the header buttons container */
+.Header-buttons {
+  display: flex; /* Display as flex container */
+}
+
+/* Styling for the header button */
+.Header-button {
+  padding: 0.5rem 1rem; /* Add padding */
+  margin-left: 0.5rem; /* Add left margin */
+  background-color: #fff; /* Set background color */
+  color: #333; /* Set font color */
+  border: none; /* Remove border */
+  border-radius: 0.25rem; /* Add border radius */
+  font-size: 1rem; /* Set font size */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+/* Styling for the header button on hover */
+.Header-button:hover {
+  background-color: #696969; /* Change background color */
+}
+
+/* Styling for the UBC ECE button */
+.ubc-ece-button {
+  background-color: #ef5350; /* Set background color */
+  color: #fff; /* Set font color */
+}
+
+/* Styling for the pixel text elements */
+
+.pixel, .pixel2 {
+font-size: 25px;
+color: white;
+height: auto;
+margin: 10px;
+font-family: 'pixelFont';
+
+position: relative;
+display: inline-block;
+vertical-align: top;
+text-transform: uppercase;
+
+cursor: pointer;
+
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.pixel2:hover {
+  background-color: #006c1b;
+}
+.pixel:hover {
+  background-color: #006c1b;
+}
+.pixel:active, .pixel2:active {
+top: 2px;
+}
+
+.pixel {
+line-height: 0;
+
+image-rendering: optimizeSpeed;
+image-rendering: -moz-crisp-edges; /* Firefox */
+image-rendering: -o-crisp-edges; /* Opera */
+image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+
+border-style: solid;
+border-width: 20px;
+-moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+-webkit-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+-o-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+background-color: #333;
+}
+
+.pixel p {
+display: inline-block;
+vertical-align: top;
+position: relative;
+width: auto;
+text-align: center;
+margin: -20px -20px;
+line-height: 20px;
+padding: 10px 20px;
+
+background: #000000;
+background:
+  linear-gradient(135deg, transparent 10px, #000000 0) top left,
+  linear-gradient(225deg, transparent 10px, #000000 0) top right,
+  linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+  linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
+background-size: 50% 50%;
+background-repeat: no-repeat;
+background-image:
+  radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
+  radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
+  radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
+  radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+}
+
+.pixel2 {
+position: relative;
+display: block;
+margin: 10px;
+font-family: 'pixelFont';
+text-transform: uppercase;
+
+font-size: 25px;
+color: white;
+}
+
+.pixel2::before {
+content: "";
+display: block;
+position: absolute;
+top: 10px;
+bottom: 10px;
+left: -10px;
+right: -10px;
+background: black;
+z-index: -1;
+}
+
+.pixel2::after {
+content: "";
+display: block;
+position: absolute;
+top: 4px;
+bottom: 4px;
+left: -6px;
+right: -6px;
+background: black;
+z-index: -1;
+}
+
+.pixel2 {
+padding: 10px 10px;
+position: relative;
+background: black;
+width: auto;
+z-index: 2;
+}
